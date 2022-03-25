@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+
+  <title>Adenoma Detection on Colonoscopy</title>
+  <link href='https://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Arimo' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Hind:300' rel='stylesheet' type='text/css'>
+<link href='https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300' rel='stylesheet' type='text/css'>
+<link type="text/css" rel="stylesheet" href="{{ url_for('static', filename='./style.css') }}">
+
+</head>
+
+<body>
+ <div class="login">
+	<h1>Adenoma Detection on Colonoscopy</h1>
+
+    <!-- Form to enter new data for predictions  -->
+    <form action="{{ url_for('predict')}}"method="POST">
+
+    	<input type="number" name="age" placeholder="Age" required="required" /><br>
+        <input type="number" name="Hepatitis C" placeholder="Hepatitis C (Y=1, N=0)" required="required" /><br>
+        <input type="number" name="aspirin" placeholder="Aspirin (Y=1, N=0)" required="required" /><br>
+        <input type="number" name="smoking" placeholder="Smoking (Y=1, N=0)" required="required" /><br>
+
+        <input type="number" name="alcohol" placeholder="Alcohol (Y=1, N=0)" required="required" /><br>
+        <input type="number" name="ethnicity" placeholder="Ethnicity (1. Caucasian 2. Hispanic 3. Asian 4. African American 5.other)" required="required" /><br>
+        <input type="number" step = "any" name="bmi" placeholder="BMI" required="required" /><br>
+        <input type="number" name="gender" placeholder="Gender (M=0, F:1)" required="required" /><br>
+
+
+        <button type="submit" class="btn btn-primary btn-block btn-large">Predict</button>
+    </form>
+
+   <br>
+   <br>
+     {{pred}}
+ </div>
+
+ <div>
+
+ </div>
+
+</body>
+</html>
