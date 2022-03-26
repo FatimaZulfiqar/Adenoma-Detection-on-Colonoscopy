@@ -3,5 +3,4 @@ The project is based on a study on the rate of tubular adenoma detection on colo
 
 The Flask Web API is created for this purpose which is further deployed to the Heroku web server
 
-You can access to the application from the link down below 👇
-https://adenomadetection.herokuapp.com/
+You can access to the application from this link 👉  https://adenomadetection.herokuapp.com/
